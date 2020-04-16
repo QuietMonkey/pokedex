@@ -1,11 +1,16 @@
-import React from 'react';
-  
+import React, { useState } from 'react';
+import pokemonTYPE from './models/pokemon'
+import mockPokemons from './models/mock-pokemon'
+
 const App: React.FC = () => {
- const name: String = 'React';
-    
- return (
-  <h1>Hello, {name} !</h1>
- )
+  const [pokemons, setPokemons] = useState<pokemonTYPE[]>(mockPokemons);
+
+  return (
+    <>
+      <h1>Pokédex</h1>
+      <p>Il y a {pokemons.length} pokémons dans le pokédex.</p>
+    </>
+  )
 }
-  
+
 export default App;
