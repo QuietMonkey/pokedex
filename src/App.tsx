@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import pokemonTYPE from './models/pokemon'
 import mockPokemons from './models/mock-pokemon'
 
 const App: React.FC = () => {
-  const [pokemons, setPokemons] = useState<pokemonTYPE[]>(mockPokemons);
+  const [pokemons, setPokemons] = useState<pokemonTYPE[]>([]);
+  useEffect(() => {
+    setPokemons(mockPokemons)
+  }, [])
 
   return (
     <>
