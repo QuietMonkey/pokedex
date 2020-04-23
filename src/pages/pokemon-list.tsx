@@ -10,7 +10,7 @@ const PokeList = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 20px 40px;
+  padding: 20px 230px;
 `;
 
 const PokemonList: React.FC = () => {
