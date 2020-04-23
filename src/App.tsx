@@ -1,11 +1,14 @@
 import React from 'react';
-  
+
+import PokemonList from './pages/pokemon-list';
+
 const App: React.FC = () => {
- const name: String = 'React';
-    
- return (
-  <h1>Hello, {name} !</h1>
- )
+
+  return (
+    <>
+      <PokemonList />
+    </>
+  )
 }
-  
+
 export default App;
