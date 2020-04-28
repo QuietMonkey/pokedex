@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import pokemonTYPE from '../models/pokemon';
 
+import typeColor from '../utils/typeTheme';
+
 type Props = {
   pokemon: pokemonTYPE
 }
@@ -19,19 +21,7 @@ const PokeCard = styled.div<{isActive: boolean}>`
 `;
 
 const TypeSpan = styled.span<{type: string}>`
-  background-color: ${props => {
-    if (props.type === 'Combat') return 'orange'
-    if (props.type === 'Eau') return 'lightblue'
-    if (props.type === 'Electrik') return 'yellow'
-    if (props.type === 'Fée') return 'pink'
-    if (props.type === 'Feu') return '#dd3c3c'
-    if (props.type === 'Insecte') return '#d16a47'
-    if (props.type === 'Plante') return '#a6e963'
-    if (props.type === 'Poison') return '#8c47d1'
-    if (props.type === 'Psy') return '#c763e9'
-    if (props.type === 'Vol') return '#5778db'
-    return 'lightgrey'
-  }};
+  background-color: ${props => typeColor(props.type)};
   width: 66px;
   height: 34px;
   padding: 8px;
